@@ -82,17 +82,26 @@ WSGI_APPLICATION = "greencraft.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.oracle',
+#         'NAME': 'orcl',  # Oracle DB 이름
+#         'USER': 'c##greencraft6',  # Oracle 사용자 이름
+#         'PASSWORD': '2030',  # Oracle 비밀번호
+#         'HOST': 'localhost',  # Oracle 호스트, 로컬일 경우 'localhost'
+#         'PORT': '1521',  # Oracle 포트, 기본값은 '1521'
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'orcl',  # Oracle DB 이름
-        'USER': 'c##greencraft6',  # Oracle 사용자 이름
-        'PASSWORD': '2030',  # Oracle 비밀번호
-        'HOST': 'localhost',  # Oracle 호스트, 로컬일 경우 'localhost'
+        'NAME': 'xe',  # Oracle DB 이름
+        'USER': 'testuser',  # Oracle 사용자 이름
+        'PASSWORD': '12345',  # Oracle 비밀번호
+        'HOST': '34.47.81.202',  # Oracle 호스트, 로컬일 경우 'localhost'
         'PORT': '1521',  # Oracle 포트, 기본값은 '1521'
     }
 }
-
 
 
 # Password validation
