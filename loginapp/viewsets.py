@@ -38,6 +38,9 @@ class LoginAPIView(APIView):
             return Response({
                 'access': str(refresh.access_token),
                 'username': str(username),
+                'is_superuser': user.is_superuser,
+                'is_staff': user.is_superuser,
+                'managercode': user.managercode,
 
             }, status=status.HTTP_200_OK)
         return Response({"message": "Invalid credentials"}, status=status.HTTP_400_BAD_REQUEST)
